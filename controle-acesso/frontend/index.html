@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Controle de Acesso</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <span>🔐</span>
+            <h1>Controle de Acesso</h1>
+        </div>
+
+        <nav>
+            <button onclick="mostrarTela('inicio')">Início</button>
+            <button onclick="mostrarTela('cadastro')">Cadastro</button>
+            <button onclick="mostrarTela('acesso')">Acesso</button>
+            <button onclick="mostrarTela('listagem')">Usuários</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="tela ativa">
+            <div class="boas-vindas">
+                <h2>Bem-vindo ao Sistema</h2>
+                <p>Gerencie usuários e controle o acesso de maneira simples.</p>
+                <button class="botao-principal"
+                    onclick="mostrarTela('cadastro')">
+                    Começar
+                </button>
+            </div>
+        </section>
+
+        <section id="cadastro" class="tela">
+            <div class="card">
+                <h2>Cadastrar usuário</h2>
+                <p>Preencha os dados para realizar o cadastro.</p>
+
+                <form id="formCadastro">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome"
+                        placeholder="Digite o nome" required>
+
+                    <label for="senhaCadastro">Senha</label>
+                    <input type="password" id="senhaCadastro"
+                        placeholder="Digite a senha" required>
+
+                    <button type="submit" class="botao-principal">
+                        Cadastrar
+                    </button>
+                </form>
+
+                <p id="mensagemCadastro" class="mensagem"></p>
+            </div>
+        </section>
+
+        <section id="acesso" class="tela">
+            <div class="card">
+                <h2>Verificar acesso</h2>
+                <p>Informe suas credenciais para verificar o acesso.</p>
+
+                <form id="formAcesso">
+                    <label for="nomeAcesso">Nome</label>
+                    <input type="text" id="nomeAcesso"
+                        placeholder="Digite seu nome" required>
+
+                    <label for="senhaAcesso">Senha</label>
+                    <input type="password" id="senhaAcesso"
+                        placeholder="Digite sua senha" required>
+
+                    <button type="submit" class="botao-principal">
+                        Verificar acesso
+                    </button>
+                </form>
+
+                <p id="mensagemAcesso" class="mensagem"></p>
+            </div>
+        </section>
+
+        <section id="listagem" class="tela">
+            <div class="card">
+                <h2>Usuários cadastrados</h2>
+                <p>Consulte os usuários registrados no sistema.</p>
+
+                <div id="listaUsuarios">
+                    <p>Nenhum usuário carregado.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Sistema de Controle de Acesso</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
