@@ -1,0 +1,52 @@
+// Cliente HTTP para o frontend (React, Vue, Angular ou JS puro).
+// Requisitos: credentials "include" (envia o cookie de sessão) e header X-XSRF-TOKEN.
+
+const BASE_URL = "http://localhost:8080/api";
+
+function getCookie(name) {
+  return document.cookie
+    .split("; ")
+    .find((c) => c.startsWith(name + "="))
+    ?.split("=")[1];
+}
+
+async function request(path, { method = "GET", body } = {}) {
+  const headers = { "Content-Type": "application/json" };
+  if (method !== "GET") {
+    const token = getCookie("XSRF-TOKEN");
+    if (token) headers["X-XSRF-TOKEN"] = decodeURIComponent(token);
+  }
+
+  const res = await fetch(BASE_URL + path, {
+    method,
+    headers,
+    credentials: "include",
+    body: body ? JSON.stringify(body) : undefined,
+  });
+
+  if (res.status === 401) throw new Error("UNAUTHENTICATED"); // redirecione para /login
+  if (res.status === 403) throw new Error("FORBIDDEN");        // mostre "sem permissão"
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || "Erro na requisição");
+  }
+  return res.status === 204 ? null : res.json();
+}
+
+export const api = {
+  // chame 1x ao carregar o app, antes de qualquer POST
+  init: () => request("/auth/csrf"),
+  login: (username, password) => request("/auth/login", { method: "POST", body: { username, password } }),
+  logout: () => request("/auth/logout", { method: "POST" }),
+  me: () => request("/auth/me"),
+  dashboard: () => request("/dashboard"),
+  reports: () => request("/reports"),
+  listUsers: () => request("/users"),
+  createUser: (data) => request("/users", { method: "POST", body: data }),
+  deleteUser: (id) => request(`/users/${id}`, { method: "DELETE" }),
+};
+
+// Exemplo de uso:
+//   await api.init();
+//   const user = await api.login("admin", "admin12345");
+//   if (user.roles.includes("ADMIN")) { /* mostrar menu de administração */ }

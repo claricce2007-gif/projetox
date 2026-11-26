@@ -18,7 +18,7 @@ document.getElementById("formCadastro")
         const nome = document.getElementById("nome").value.trim();
         const senha = document.getElementById("senhaCadastro").value;
 
-        if (!nome || !senha) {
+        if (!nome || !senha ) {
             return;
         }
 

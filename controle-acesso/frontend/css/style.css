@@ -6,14 +6,14 @@
 }
 
 body {
-    background-color: #f1f4f9;
-    color: #263445;
+    background-color: #060631;
+    color: #e8ebee;
     min-height: 100vh;
 }
 
 header {
-    background-color: #142b49;
-    color: white;
+    background-color: #060631;
+    color: #bb8afcb4;
     padding: 22px 7%;
     display: flex;
     justify-content: space-between;
@@ -45,7 +45,7 @@ nav {
 nav button {
     background: transparent;
     border: none;
-    color: white;
+    color: #bc7ec2;
     padding: 10px 14px;
     cursor: pointer;
     font-size: 15px;
@@ -53,7 +53,7 @@ nav button {
 }
 
 nav button:hover {
-    background-color: #29476b;
+    background-color: #01060c;
 }
 
 main {
@@ -71,7 +71,7 @@ main {
 }
 
 .boas-vindas {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 65px 30px;
     border-radius: 14px;
     text-align: center;
@@ -81,16 +81,16 @@ main {
 .boas-vindas h2 {
     font-size: 32px;
     margin-bottom: 15px;
-    color: #142b49;
+    color: #6b55e2;
 }
 
 .boas-vindas p {
-    color: #687789;
+    color: #bc7ec2;
     margin-bottom: 25px;
 }
 
 .card {
-    background-color: white;
+    background-color: rgb(118, 100, 151);
     max-width: 520px;
     margin: 0 auto;
     padding: 35px;
@@ -99,12 +99,12 @@ main {
 }
 
 .card h2 {
-    color: #142b49;
+    color: #a985fc;
     margin-bottom: 10px;
 }
 
 .card > p {
-    color: #687789;
+    color: #43158b;
     margin-bottom: 25px;
 }
 
@@ -121,7 +121,7 @@ label {
 
 input {
     padding: 13px;
-    border: 1px solid #d5dce5;
+    border: 1px solid #5b3dc9;
     border-radius: 7px;
     outline: none;
     font-size: 15px;
@@ -129,22 +129,22 @@ input {
 }
 
 input:focus {
-    border-color: #2874c7;
+    border-color: #9383ad;
 }
 
 .botao-principal {
-    background-color: #1766b1;
-    color: white;
+    background-color: #a286f0;
+    color: #ffffff;
     border: none;
     padding: 13px;
     border-radius: 7px;
-    cursor: pointer;
+    cursor: pointer;src: ;
     font-size: 15px;
     font-weight: bold;
 }
 
 .botao-principal:hover {
-    background-color: #104c87;
+    background-color: #ffffff;
 }
 
 .mensagem {
@@ -154,14 +154,14 @@ input:focus {
 
 #listaUsuarios {
     padding: 15px;
-    background-color: #f1f4f9;
+    background-color: #ffffff;
     border-radius: 7px;
 }
 
 footer {
     text-align: center;
     padding: 25px;
-    color: #687789;
+    color: #ffffff;
 }
 
 @media (max-width: 600px) {
