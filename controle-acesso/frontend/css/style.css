@@ -1,14 +1,34 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+/* Poppins Medium */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
 }
 
+/* Poppins Bold */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Configuração geral */
 body {
-    background-color: #060631;
-    color: #e8ebee;
-    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+/* Títulos em Poppins Bold */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+/* Botões em Poppins Medium */
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
 
 header {
