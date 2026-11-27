@@ -32,8 +32,8 @@ button {
 }
 
 header {
-    background-color: #060631;
-    color: #bb8afcb4;
+    background-color: #000000;
+    color: #fbfafd;
     padding: 22px 7%;
     display: flex;
     justify-content: space-between;
@@ -65,7 +65,7 @@ nav {
 nav button {
     background: transparent;
     border: none;
-    color: #bc7ec2;
+    color: #fef1ff;
     padding: 10px 14px;
     cursor: pointer;
     font-size: 15px;
@@ -91,7 +91,7 @@ main {
 }
 
 .boas-vindas {
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(243, 242, 242, 0.479);
     padding: 65px 30px;
     border-radius: 14px;
     text-align: center;
@@ -101,30 +101,30 @@ main {
 .boas-vindas h2 {
     font-size: 32px;
     margin-bottom: 15px;
-    color: #6b55e2;
+    color: #020203;
 }
 
 .boas-vindas p {
-    color: #bc7ec2;
+    color: #070607;
     margin-bottom: 25px;
 }
 
 .card {
-    background-color: rgb(118, 100, 151);
+    background-color: rgba(239, 239, 240, 0.493);
     max-width: 520px;
     margin: 0 auto;
     padding: 35px;
     border-radius: 14px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 15px rgba(248, 246, 246, 0.329);
 }
 
 .card h2 {
-    color: #a985fc;
+    color: #0d0d0f;
     margin-bottom: 10px;
 }
 
 .card > p {
-    color: #43158b;
+    color: #000000;
     margin-bottom: 25px;
 }
 
@@ -141,7 +141,7 @@ label {
 
 input {
     padding: 13px;
-    border: 1px solid #5b3dc9;
+    border: 1px solid #000000;
     border-radius: 7px;
     outline: none;
     font-size: 15px;
@@ -149,11 +149,11 @@ input {
 }
 
 input:focus {
-    border-color: #9383ad;
+    border-color: #ffffff8c;
 }
 
 .botao-principal {
-    background-color: #a286f0;
+    background-color: #000000;
     color: #ffffff;
     border: none;
     padding: 13px;
@@ -205,4 +205,19 @@ footer {
     .boas-vindas h2 {
         font-size: 25px;
     }
+}
+
+body {
+    background-image: url("../img/image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
 }
